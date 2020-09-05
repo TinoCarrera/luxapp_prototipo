@@ -1,27 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:luxes_prototipo/colors.dart';
+import 'package:luxes_prototipo/luxes_home.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Luxes',
-      theme: buildThemeData(),
-      home: Scaffold(
-        appBar: AppBar(title: Text('Luxes')),
+      theme: ThemeData(
+        primaryColor: Color(0xffC79158),
+        accentColor: Color(0xffF0B06C),
       ),
+      home: LuxesHome(),
     );
   }
-}
-
-ThemeData buildThemeData() {
-  final baseTheme = ThemeData.light();
-  return baseTheme.copyWith(
-    primaryColor: kPrimaryColor,
-  );
 }
