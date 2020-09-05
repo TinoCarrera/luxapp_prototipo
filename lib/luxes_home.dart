@@ -22,12 +22,11 @@ class _LuxesHomeState extends State<LuxesHome>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Luxes"),
-        elevation: 0.7,
+        title: Text("LuxApp"),
         bottom: TabBar(
           controller: _tabController,
           indicatorColor: Colors.white,
-          tabs: <Widget>[
+          tabs: [
             Tab(text: "INSUMOS"),
             Tab(text: "PRODUCTOS"),
             Tab(
@@ -35,19 +34,19 @@ class _LuxesHomeState extends State<LuxesHome>
             ),
           ],
         ),
+        actions: [
+          Icon(Icons.search),
+          Padding(padding: const EdgeInsets.symmetric(horizontal: 5.0)),
+          Icon(Icons.more_vert),
+        ],
       ),
       body: TabBarView(
         controller: _tabController,
-        children: <Widget>[
+        children: [
           InsumosScreen(),
           ProductosScreen(),
           PedidosScreen(),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Theme.of(context).accentColor,
-        child: Icon(Icons.message),
-        onPressed: () => print("Abierto"),
       ),
     );
   }

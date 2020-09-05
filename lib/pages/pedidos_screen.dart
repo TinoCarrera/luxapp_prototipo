@@ -6,7 +6,7 @@ class PedidosScreen extends StatelessWidget {
     return Center(
       child: Text(
         "Pedidos",
-        style: TextStyle(fontSize: 20),
+        style: TextStyle(fontSize: 20.0),
       ),
     );
   }
