@@ -35,13 +35,27 @@ class _ProductosScreenState extends State<ProductosScreen> {
                 ),
               ],
             ),
-            subtitle: Container(
-              padding: const EdgeInsets.only(top: 5.0),
-              child: Text(
-                dummyData[i].description,
-                style: TextStyle(color: Colors.grey, fontSize: 14.0),
-              ),
+            subtitle: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  dummyData[i].description,
+                  style: TextStyle(color: Colors.grey, fontSize: 14.0),
+                ),
+                Text(
+                  dummyData[i].stock,
+                  style: TextStyle(color: Colors.grey, fontSize: 14.0),
+                ),
+              ],
             ),
+            //subtitle: Container(
+            //  padding: const EdgeInsets.only(top: 5.0),
+            //  child: Text(
+            //    dummyData[i].description,
+            //    style: TextStyle(color: Colors.grey, fontSize: 14.0),
+            //  ),
+            //),
+            onTap: () {},
           )
         ],
       ),

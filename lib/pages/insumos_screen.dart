@@ -42,6 +42,7 @@ class _InsumosScreenState extends State<InsumosScreen> {
                 style: TextStyle(color: Colors.grey, fontSize: 14.0),
               ),
             ),
+            onTap: () {},
           )
         ],
       ),

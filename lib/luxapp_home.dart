@@ -35,10 +35,8 @@ class _LuxAppHomeState extends State<LuxAppHome>
               pinned: true,
               floating: true,
               actions: [
-                Icon(Icons.search),
-                Container(width: 10.0),
-                Icon(Icons.more_vert),
-                Container(width: 10.0),
+                IconButton(icon: Icon(Icons.search), onPressed: () {}),
+                IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
               ],
               bottom: TabBar(
                 controller: _tabController,
