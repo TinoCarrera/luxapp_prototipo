@@ -13,9 +13,6 @@ class _InsumosScreenState extends State<InsumosScreen> {
       itemCount: dummyData.length,
       itemBuilder: (context, i) => Column(
         children: [
-          Divider(
-            height: 10.0,
-          ),
           ListTile(
             leading: CircleAvatar(
               foregroundColor: Theme.of(context).primaryColor,
@@ -43,7 +40,8 @@ class _InsumosScreenState extends State<InsumosScreen> {
               ),
             ),
             onTap: () {},
-          )
+          ),
+          Divider(height: 10.0),
         ],
       ),
     );

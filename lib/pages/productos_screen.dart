@@ -13,9 +13,6 @@ class _ProductosScreenState extends State<ProductosScreen> {
       itemCount: dummyData.length,
       itemBuilder: (context, i) => Column(
         children: [
-          Divider(
-            height: 10.0,
-          ),
           ListTile(
             leading: CircleAvatar(
               foregroundColor: Theme.of(context).primaryColor,
@@ -48,15 +45,9 @@ class _ProductosScreenState extends State<ProductosScreen> {
                 ),
               ],
             ),
-            //subtitle: Container(
-            //  padding: const EdgeInsets.only(top: 5.0),
-            //  child: Text(
-            //    dummyData[i].description,
-            //    style: TextStyle(color: Colors.grey, fontSize: 14.0),
-            //  ),
-            //),
             onTap: () {},
-          )
+          ),
+          Divider(height: 10.0),
         ],
       ),
     );

@@ -26,13 +26,14 @@ class _LuxAppHomeState extends State<LuxAppHome>
     return Scaffold(
       body: NestedScrollView(
         controller: _scrollController,
-        headerSliverBuilder: (BuildContext context, bool boxIsScrolled) {
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             SliverAppBar(
               backgroundColor: Theme.of(context).primaryColor,
               title: Text("LuxApp"),
               pinned: true,
               floating: true,
+              forceElevated: innerBoxIsScrolled,
               actions: [
                 IconButton(icon: Icon(Icons.search), onPressed: () {}),
                 IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
@@ -51,12 +52,12 @@ class _LuxAppHomeState extends State<LuxAppHome>
           ];
         },
         body: TabBarView(
-          children: <Widget>[
+          controller: _tabController,
+          children: [
             InsumosScreen(),
             ProductosScreen(),
             PedidosScreen(),
           ],
-          controller: _tabController,
         ),
       ),
     );
